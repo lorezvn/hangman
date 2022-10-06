@@ -76,6 +76,7 @@ while True:
             # Correct word
             if try_word == word_to_guess:
                 print('Correct choice!')
+                loading()
                 break
             
             # Wrong Word
