@@ -17,8 +17,11 @@ def modify_current(word_to_guess, try_letter, current_word):
     return ' '.join(current_word)
 
 
-def check_is_correct(letter, already_used):
-    return letter.isalpha() and len(letter) == 1 and letter not in already_used
+def check_letter(letter, letters_used):
+    return letter.isalpha() and len(letter) == 1 and letter not in letters_used
+
+def check_word(word, words_used):
+    return word.isalpha() and word not in words_used
 
 def loading():
     for p in '...':
@@ -26,5 +29,10 @@ def loading():
         sleep(0.5)
     print()
     print()
+    
+def power_strip(word):
+    return ''.join([w for w in word if w != ' '])
+        
+        
         
         
